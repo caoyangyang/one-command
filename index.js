@@ -1,3 +1,9 @@
-exports.showMsg = function () {
-    console.log("This is my first module");
+const gitHooksPlugin = require('./plugins/git-hooks.js')
+
+exports.addGitHooks = function () {
+    gitHooksPlugin.add()
 };
+
+
+
+
