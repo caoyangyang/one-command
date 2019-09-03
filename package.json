@@ -1,0 +1,24 @@
+{
+  "name": "one-command",
+  "version": "1.0.0",
+  "description": "only one command add awesome features",
+  "main": "index.test.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caoyangyang/one-command.git"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "js"
+  ],
+  "author": "YangyangCAO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caoyangyang/one-command/issues"
+  },
+  "homepage": "https://github.com/caoyangyang/one-command#readme"
+}
