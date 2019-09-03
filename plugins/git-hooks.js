@@ -1,4 +1,4 @@
-const runExec = require('../common/run-exec')
+const npmInstaller = require('../common/npm-installer')
 exports.add = ()=>{
-    runExec("","npm i husky --save")
+    npmInstaller.install("husky")
 }
