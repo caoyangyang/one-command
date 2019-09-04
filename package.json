@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "only one command add awesome features",
   "main": "index.js",
+  "bin": "bin/cli.js",
+  "files": [
+    "common",
+    "bin",
+    "!**/__test__/**"
+  ],
   "scripts": {
     "test": "test"
   },
@@ -22,6 +28,10 @@
   },
   "homepage": "https://github.com/caoyangyang/one-command#readme",
   "dependencies": {
+    "cac": "^6.5.2",
     "chalk": "^2.4.2"
+  },
+  "devDependencies": {
+    "husky": "^3.0.5"
   }
 }

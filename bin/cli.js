@@ -1,5 +1,5 @@
 const cli = require('cac')();
-const gitHooksPlugin = require('./plugins/git-hooks.js');
+const gitHooksPlugin = require('../plugins/git-hooks.js');
 
 cli
 	.command('add <feature>', 'Add feature')
