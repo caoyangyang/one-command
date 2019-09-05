@@ -1,12 +1,13 @@
 {
   "name": "one-command-awesome",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "only one command add awesome features",
   "main": "index.js",
   "bin": "bin/cli.js",
   "files": [
     "common",
     "bin",
+    "plugins",
     "!**/__test__/**"
   ],
   "scripts": {

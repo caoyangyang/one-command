@@ -1,4 +1,4 @@
 const npmInstaller = require('../common/npm-installer')
-exports.add = ()=>{
+exports.exec = ()=>{
     npmInstaller.devInstall("husky")
 }
