@@ -3,16 +3,24 @@ const chalk = require('chalk')
 const cli = require('cac')();
 const gitHooksPlugin = require('../plugins/git-hooks.js');
 const nodeVersionPlugin = require('../plugins/node-version.js');
+const esLintPlugin = require('../plugins/es-lint.js');
 
 const pluginList={
     gitHook:gitHooksPlugin,
-	nodeVersion:nodeVersionPlugin
+	nodeVersion:nodeVersionPlugin,
+    esLint: esLintPlugin
 }
 cli
 	.command('add <feature>', 'Add feature')
 	.action(feature => {
         pluginList[`${feature}`].exec()
 	});
+
+cli
+    .command('init <feature>', 'init feature help')
+    .action(feature => {
+        pluginList[`${feature}`].init()
+    });
 
 cli
     .command('ls', 'Show all feature plugin')
