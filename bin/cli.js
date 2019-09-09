@@ -4,11 +4,13 @@ const cli = require('cac')();
 const gitHooksPlugin = require('../plugins/git-hooks.js');
 const nodeVersionPlugin = require('../plugins/node-version.js');
 const esLintPlugin = require('../plugins/es-lint.js');
+const mochaPlugin = require('../plugins/mocha.js');
 
 const pluginList={
     gitHook:gitHooksPlugin,
 	nodeVersion:nodeVersionPlugin,
-    esLint: esLintPlugin
+    esLint: esLintPlugin,
+    mocha: mochaPlugin
 }
 cli
 	.command('add <feature>', 'Add feature')
