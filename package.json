@@ -1,6 +1,6 @@
 {
   "name": "one-command-awesome",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "only one command add awesome features",
   "main": "bin/cli.js",
   "bin": "bin/cli.js",
@@ -30,7 +30,9 @@
   "homepage": "https://github.com/caoyangyang/one-command#readme",
   "dependencies": {
     "cac": "^6.5.2",
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "prompt": "^1.0.0",
+    "replace-in-file": "^4.1.3"
   },
   "devDependencies": {
     "husky": "^3.0.5",
