@@ -1,12 +1,15 @@
 const replace = require('replace-in-file');
+const path = require('path');
 const chalk = require('chalk');
 const prompt = require('prompt');
 const runExec = require('../common/run-exec');
 
 exports.exec = async () => {
-    runExec("cp ./template/init-demo/Jenkinsfile ./Jenkinsfile")
-    runExec("mkdir -p ./docker")
-    runExec("cp ./template/init-demo/Dockerfile ./docker/Dockerfile")
+    const jenkinsFileTemplatePath= path.resolve(__dirname,'../template/init-demo/Jenkinsfile');
+    const dockerFileTemplatePath= path.resolve(__dirname,'../template/init-demo/Dockerfile');
+    runExec(`cp ${jenkinsFileTemplatePath} ./Jenkinsfile`);
+    runExec("mkdir -p ./docker");
+    runExec(`cp ${dockerFileTemplatePath} ./docker/Dockerfile`)
     getUrlFromInput((url, image_name)=>generateJenkinsFileFor(url,image_name))
 }
 
