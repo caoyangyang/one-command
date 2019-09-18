@@ -5,8 +5,10 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # Bundle app source
-COPY server /app/server
-COPY *.json /app/
+COPY . /app
+RUN npm install
+RUN npm run build
 
-EXPOSE 4455
-CMD [ "node", "server/index.js" ]
+EXPOSE 3000
+## the start script define in package.json
+CMD ["npm", "run","start:prod" ]
